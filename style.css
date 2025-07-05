@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+#calculatorBody {
+    margin-top: 20px;
+    width: 500px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 60px;
+    gap: 20px
+}
+
+
+#screen {
+    background-color: aliceblue;
+    width: 480px;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.row1 .number, #multiply{
+    width: 90px;
+    height: 90px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;   
+}
+
+.row2 .number, #subtract {
+    width: 90px;
+    height: 90px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;   
+}
+
+.row3 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;   
+}
+
+.row3 .number, #add {
+    width: 90px;
+    height: 90px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;   
+}
+
+.row4 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;   
+}
+
+.row4 .last {
+    width: 90px;
+    height: 90px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;       
+}
+
+.prerow {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;       
+}
+
+.prerow .first {
+    width: 90px;
+    height: 90px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;       
+}   
