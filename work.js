@@ -92,7 +92,22 @@ function operatorFunction() {
     operatorChoice.forEach(element => {
         element.addEventListener("click", (e) => {
             if(first === '') return;
-            isClicked = true; //operator already clicked, following are the reset method and the switch statement
+            if(first !== '' && operator !== '' && second !== '') {
+                while (screen.firstChild) {
+                    screen.removeChild(screen.firstChild);
+                }
+                let result = operation(first, operator, second);
+                let resultElement = document.createElement('p');
+                resultElement.className = 'display-item';
+                resultElement.textContent = result;
+                screen.appendChild(resultElement);
+                first = result.toString();
+                second = '';
+                isClicked = true;
+            }
+            else {
+                isClicked = true;
+            } 
             if(currentOperator) {currentOperator.remove();}
             let particularOperator = document.createElement('p');
             switch(e.target.id) {
