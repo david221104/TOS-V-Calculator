@@ -3,7 +3,7 @@ body {
     flex-direction: row;
     justify-content: center;
     background-color: burlywood;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     font-size: 30px;
 }
 
@@ -28,6 +28,10 @@ body {
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
+}
+
+#screen p {
+    font-size: 30px;
 }
 
 .row1 {
@@ -95,7 +99,7 @@ body {
     margin-top: 30px;   
 }
 
-.row4 .last {
+.row4 .last, #zero {
     width: 90px;
     height: 90px;
     background: black;

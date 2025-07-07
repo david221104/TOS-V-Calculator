@@ -91,8 +91,8 @@ function operatorFunction() {
     let operatorChoice = document.querySelectorAll(".operator");
     operatorChoice.forEach(element => {
         element.addEventListener("click", (e) => {
-            isClicked = true; //operator already clicked, following are the reset method and the switch statement
             if(first === '') return;
+            isClicked = true; //operator already clicked, following are the reset method and the switch statement
             if(currentOperator) {currentOperator.remove();}
             let particularOperator = document.createElement('p');
             switch(e.target.id) {
@@ -112,7 +112,6 @@ function operatorFunction() {
             screen.appendChild(particularOperator);
             currentOperator = particularOperator;
             console.log(`Operator: ${operator}`);
-            isClicked = false;
         })
     })
 }
@@ -127,6 +126,7 @@ function disableOperator() {
 function equals() {
     let equaling = document.querySelector('#equals');
     equaling.addEventListener('click', () => {
+        console.log('equals clicked', {first, operator, second})
         if(first !== '' && operator !== '' && second !== '') {
             while(screen.firstChild) {
                 screen.removeChild(screen.firstChild);
@@ -136,7 +136,6 @@ function equals() {
             resultElement.textContent = result;
             screen.appendChild(resultElement);
             first = result.toString();
-            console.log(first);
             operator = '';
             second = '';
             currentOperator = null;
@@ -149,15 +148,14 @@ function equals() {
 function clear() {
     let clearing = document.querySelector('#ac');
     clearing.addEventListener('click', () => {
+        while(screen.firstChild) {
+            screen.removeChild(screen.firstChild);
+        }        
         first = '';
         second = '';
         operator = '';
         isClicked = false;
-        screen.textContent = '';
         currentOperator = null;
-        while(screen.firstChild) {
-            screen.removeChild(screen.firstChild);
-        }
         disableOperator();
     });
 }
